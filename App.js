@@ -37,6 +37,11 @@ class Clock extends React.Component{
       minute : this.props.data.minutes
     });
   }
+  componentWillReceiveProps(newProps){
+    this.setState({
+      minute : newProps.data.minutes
+    })
+  }
   // start the timer
   startTimer(){
     timer = setInterval(()=>{
